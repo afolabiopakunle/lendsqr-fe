@@ -1,4 +1,4 @@
-<mat-toolbar color="" class="header shadow">
+<mat-toolbar color="" class="header">
   <button
     type="button"
     aria-label="Toggle sidenav"
@@ -12,11 +12,11 @@
     <input type="text" class="form-control" placeholder="Search for everything" aria-label="Search for everything" aria-describedby="button-addon2">
     <button class="btn btn-outline-secondary" type="button" id="button-addon2"><mat-icon class="pt-1">search</mat-icon></button>
   </div>
-  <div class="pe-5">
-    <span class=""><u>Docs</u></span>
-    <span><mat-icon class="material-icons-outlined p-1">notifications</mat-icon></span>
+  <div class="">
+    <span *ngIf="!(isHandset$ | async)" class=""><u>Docs</u></span>
+    <span *ngIf="!(isHandset$ | async)"><mat-icon class="material-icons-outlined p-1">notifications</mat-icon></span>
     <span><img class="profile-pic p-2 m-3 rounded-circle" src="assets/img/83.jpg" alt=""></span>
-    <span class="fw-bold m-1">Adedeji</span>
+    <span *ngIf="!(isHandset$ | async)"class="fw-bold m-1">Adedeji</span>
     <span><mat-icon class="pt-1">arrow_drop_down</mat-icon></span>
   </div>
 </mat-toolbar>
@@ -27,9 +27,13 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar><mat-icon class="me-3 material-icons-outlined">work</mat-icon>Switch Organization <mat-icon class="pt-1 ms-3">expand_more</mat-icon></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item class="mb-1" routerLink="/dashboard"><mat-icon class="me-3 material-icons-outlined pt-1">home</mat-icon>Dashboard</a>
+    </mat-nav-list>
+    <p class="ps-3 mb-0">CUSTOMERS</p>
+    <mat-nav-list>
+      <a mat-list-item class="mb-1" routerLink="/users"><mat-icon class="me-3 material-icons-outlined pt-1">group</mat-icon>Users</a>
+      <a mat-list-item class="" routerLink="/guarantors"><mat-icon class="me-3 material-icons-outlined pt-1">groups</mat-icon>Guarantors</a>
+      <a mat-list-item routerLink="/loans"><mat-icon class="me-3 material-icons-outlined pt-1">payments</mat-icon>Loans</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
