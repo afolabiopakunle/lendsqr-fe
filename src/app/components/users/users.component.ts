@@ -13,7 +13,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 })
 export class UsersComponent implements OnInit {
   USERS_DATA!: IUser[];
-  displayedColumns: string[] = ['orgName', 'userName', 'email', 'phoneNumber'];
+  displayedColumns: string[] = ['orgName', 'userName', 'email', 'phoneNumber', 'createdAt', 'status'];
   dataSource = new MatTableDataSource<IUser>(this.USERS_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
