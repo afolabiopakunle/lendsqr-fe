@@ -18,6 +18,7 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ComingSoonComponent } from './components/coming-soon/coming-soon.compon
     MatTableModule,
     HttpClientModule,
     MatSortModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

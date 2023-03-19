@@ -13,7 +13,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 })
 export class UsersComponent implements OnInit {
   USERS_DATA!: IUser[];
-  displayedColumns: string[] = ['orgName', 'userName', 'email', 'phoneNumber', 'createdAt', 'status'];
+  displayedColumns: string[] = ['orgName', 'userName', 'email', 'phoneNumber', 'createdAt', 'status', 'options'];
   dataSource = new MatTableDataSource<IUser>(this.USERS_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -42,5 +42,13 @@ export class UsersComponent implements OnInit {
     } else {
       this._liveAnnouncer.announce('Sorting cleared');
     }
+  }
+
+  edit(row: any) {
+
+  }
+
+  delete(row: any) {
+
   }
 }
