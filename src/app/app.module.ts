@@ -17,13 +17,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     UsersComponent,
-    DashboardComponent
+    DashboardComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,
