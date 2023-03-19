@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatMenuModule } from '@angular/material/menu';
     LandingComponent,
     UsersComponent,
     DashboardComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

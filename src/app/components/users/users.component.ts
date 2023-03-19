@@ -5,6 +5,7 @@ import {MatSort, Sort} from '@angular/material/sort';
 import { IUser } from '../../models/models';
 import { UserService } from '../../services/user.service';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -21,6 +22,7 @@ export class UsersComponent implements OnInit {
 
   constructor(private userService: UserService,
               private _liveAnnouncer: LiveAnnouncer,
+              private router: Router,
               ) {
   }
 
@@ -45,7 +47,11 @@ export class UsersComponent implements OnInit {
   }
 
   edit(row: any) {
+  }
 
+  viewUser(row: any) {
+    console.log(row);
+    this.router.navigate(['/user-details', row.id])
   }
 
   delete(row: any) {
