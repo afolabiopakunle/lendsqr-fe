@@ -12,4 +12,8 @@ export class UserService {
   getUsers() {
     return this.http.get<IUser[]>('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users');
   }
+
+  getUser(id: string) {
+    return this.http.get<IUser>(` https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`)
+  }
 }
