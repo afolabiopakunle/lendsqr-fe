@@ -13,7 +13,8 @@
 
   <div class="details shadow">
     <div class="persona">
-      <img src="assets/img/avatar.svg" class="me-3" alt="">
+      <img *ngIf="!user?.profile?.avatar" src="assets/img/avatar.svg" class="me-3" alt="">
+      <img *ngIf="user?.profile?.avatar" [src]="user?.profile?.avatar" class="me-3" alt="">
       <div>
         <p class="names">
           {{user?.profile?.firstName | titlecase }} {{user?.profile?.lastName | titlecase }}
