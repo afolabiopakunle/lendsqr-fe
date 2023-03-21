@@ -75,9 +75,9 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #optionsMenu="matMenu" xPosition="before">
-              <button mat-menu-item (click)="viewUser(row)">View Details</button>
-              <button mat-menu-item (click)="edit(row)">Blacklist User</button>
-              <button mat-menu-item (click)="delete(row)">Activate User</button>
+              <button mat-menu-item (click)="viewUser(row)"><mat-icon>visibility</mat-icon>View Details</button>
+              <button mat-menu-item (click)="edit(row)"><mat-icon>person_remove</mat-icon>Blacklist User</button>
+              <button mat-menu-item (click)="delete(row)"><mat-icon>person_add</mat-icon>Activate User</button>
             </mat-menu>
           </td>
         </ng-container>
