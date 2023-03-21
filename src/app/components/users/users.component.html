@@ -74,7 +74,7 @@
             <button mat-icon-button [matMenuTriggerFor]="optionsMenu">
               <mat-icon>more_vert</mat-icon>
             </button>
-            <mat-menu #optionsMenu="matMenu">
+            <mat-menu #optionsMenu="matMenu" xPosition="before">
               <button mat-menu-item (click)="viewUser(row)">View Details</button>
               <button mat-menu-item (click)="edit(row)">Blacklist User</button>
               <button mat-menu-item (click)="delete(row)">Activate User</button>
