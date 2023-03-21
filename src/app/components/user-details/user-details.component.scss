@@ -1,5 +1,5 @@
 .details {
-  padding: 2rem;
+  padding: 2rem 2rem 5rem;
   display: flex;
 }
 
@@ -34,4 +34,26 @@ img {
   align-items: start;
   text-align: left;
   flex-direction: column;
+}
+
+.tabs {
+  margin-top: -3rem;
+  overflow-x: hidden;
+  z-index: 30;
+}
+
+.mat-h4 {
+  font-weight: 500;
+}
+
+.h-shadow {
+  box-shadow: 0px 26px 1rem rgba(0, 0, 0, 0.15) !important
+}
+
+.title {
+  font-size: 12px;
+}
+.content {
+  font-size: 16px;
+  font-weight: 500;
 }

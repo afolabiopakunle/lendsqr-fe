@@ -87,3 +87,28 @@ body {
 .mat-mdc-outlined-button {
   border-radius: 8px !important;
 }
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+
+::-webkit-scrollbar-track {
+  background: rgba(242, 244, 248, 0.5);
+  border-radius: 100vw;
+  margin-block: .5em ;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #39CDCC;
+  border-radius: 100vw;
+  border: 1px solid rgba(242, 244, 248, 0.5);
+}
+
+@supports (scrollbar-color: #39CDCC rgba(242, 244, 248, 0.5)) {
+  * {
+    scrollbar-color: #39CDCC rgba(242, 244, 248, 0.5);
+    scrollbar-width: thin;
+  }
+}

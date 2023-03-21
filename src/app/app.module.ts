@@ -24,6 +24,7 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
     MatSnackBarModule,
     MatFormFieldModule,
     MatTooltipModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

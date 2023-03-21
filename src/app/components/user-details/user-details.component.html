@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="details shadow">
+  <div class="details shadow-sm">
     <div class="persona">
       <img *ngIf="!user?.profile?.avatar" src="assets/img/avatar.svg" class="me-3" alt="">
       <img *ngIf="user?.profile?.avatar" [src]="user?.profile?.avatar" class="me-3" alt="">
@@ -23,11 +23,70 @@
       </div>
     </div>
     <div class="rating">
-      <mat-star-rating [rating]="rating" [starCount]="starCount" (ratingUpdated)="onRatingChanged($event)"></mat-star-rating>
+      <mat-star-rating [rating]="rating" [starCount]="starCount"
+                       (ratingUpdated)="onRatingChanged($event)"></mat-star-rating>
     </div>
     <div class="banking">
       <p class="account">{{ user?.accountBalance | currency:'₦'}}</p>
       <p>{{ user?.accountNumber}}/Lendsqr MFB</p>
     </div>
+  </div>
+  <div class="tabs h-shadow">
+    <mat-tab-group>
+      <mat-tab label="General Details">
+        <div class="tab-content mt-4 p-3">
+          <h4 class="mat-h4">Personal Information</h4>
+
+          <div class="row">
+            <div class="col-md-2">
+              <p class="title">FULL NAME</p>
+              <p class="content">{{user?.profile?.firstName}} {{user?.profile?.lastName}}</p>
+            </div>
+            <div class="col-md-2">
+              <p class="title">PHONE NUMBER</p>
+              <p class="content">{{user?.profile?.phoneNumber}}</p>
+            </div>
+            <div class="col-md-2">
+              <p class="title">EMAIL ADDRESS</p>
+              <p class="content" style="overflow: scroll; border-right: 2px solid #39CDCC">{{user?.email | lowercase}}</p>
+            </div>
+            <div class="col-md-2">
+              <p class="title">BVN</p>
+              <p class="content">{{user?.profile?.bvn}}</p>
+            </div>
+            <div class="col-md-2">
+              <p class="title">GENDER</p>
+              <p class="content">{{user?.profile?.gender}}</p>
+            </div>
+            <div class="col-md-2">
+              <p class="title">MARITAL STATUS</p>
+              <p class="content">{{user?.profile?.status || 'N/A'}}</p>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-2">
+              <p class="title">CHILDREN</p>
+              <p class="content">{{user?.profile?.children ?? 'N/A' }}</p>
+            </div>
+            <div class="col-md-2">
+              <p class="title">TYPE OF RESIDENCE</p>
+              <p class="content">{{user?.profile?.residence ?? 'N/A' }}</p>
+            </div>
+          </div>
+        </div>
+        <p class="hr"></p>
+
+      </mat-tab>
+      <mat-tab label="Documents">
+        <div class="tab-content mt-4 p-3">
+          <h4 class="mat-h4">Documents</h4>
+          <app-coming-soon></app-coming-soon>
+        </div>
+      </mat-tab>
+      <mat-tab label="Bank Details"> Content 3</mat-tab>
+      <mat-tab label="Loans"> Content 3</mat-tab>
+      <mat-tab label="Savings"> Content 3</mat-tab>
+      <mat-tab label="App and System"> Content 3</mat-tab>
+    </mat-tab-group>
   </div>
 </div>

@@ -23,6 +23,9 @@ export interface IProfile {
   bvn: string
   address: string
   currency: string
+  children?: string
+  status?: string
+  residence?: string
 }
 
 export interface IGuarantor {
