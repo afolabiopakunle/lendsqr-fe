@@ -11,7 +11,11 @@ import { IUser } from '../../models/models';
 export class UserDetailsComponent implements OnInit {
 
   id!: string;
-  user!: IUser;
+  user!: IUser | null;
+
+  rating:number = 1;
+  starCount:number = 3;
+
   constructor(private activatedRoute: ActivatedRoute,
               private userService: UserService,
               ) {
@@ -27,5 +31,10 @@ export class UserDetailsComponent implements OnInit {
           this.user = response;
         }
       })
+  }
+
+  onRatingChanged(rating: number){
+    console.log(rating);
+    this.rating = rating;
   }
 }

@@ -10,4 +10,19 @@
       <button mat-stroked-button color="primary">ACTIVATE USER</button>
     </div>
   </div>
+
+  <div class="details shadow">
+    <div class="persona">
+      <img src="assets/img/avatar.svg" class="me-3" alt="">
+      <div>
+        <p class="names">
+          {{user?.profile?.firstName | titlecase }} {{user?.profile?.lastName | titlecase }}
+        </p>
+        <p>{{user?.profile?.bvn}}</p>
+      </div>
+    </div>
+    <div class="rating">
+      <mat-star-rating [rating]="rating"  [starCount]="starCount" (ratingUpdated)="onRatingChanged($event)"></mat-star-rating>
+    </div>
+  </div>
 </div>

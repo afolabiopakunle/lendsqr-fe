@@ -20,6 +20,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     UsersComponent,
     DashboardComponent,
     ComingSoonComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,9 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     HttpClientModule,
     MatSortModule,
     MatMenuModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

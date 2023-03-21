@@ -1,0 +1,16 @@
+.details {
+  padding: 2rem;
+}
+
+.persona {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid lightgray;
+  max-width: 33%;
+}
+
+.persona p.names {
+  font-size: 22px;
+  font-weight: 500;
+}
+
