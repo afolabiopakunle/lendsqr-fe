@@ -1,5 +1,6 @@
 .details {
   padding: 2rem;
+  display: flex;
 }
 
 .persona {
@@ -7,6 +8,7 @@
   align-items: center;
   border-right: 1px solid lightgray;
   max-width: 33%;
+  padding: 1rem;
 }
 
 .persona p.names {
@@ -14,3 +16,7 @@
   font-weight: 500;
 }
 
+.rating {
+  padding: 2rem;
+  text-align: center;
+}
