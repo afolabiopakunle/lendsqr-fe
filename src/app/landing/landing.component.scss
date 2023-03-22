@@ -45,6 +45,10 @@
   background-color: #39cdcc21;
 }
 
-.mdc-list-item:focus::before {
+.mdc-list-item:focus::before, .mdc-list-item:hover::before {
 opacity: 0;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line.active-list-item {
+  border-left: 5px solid #39CDCC;
 }

@@ -76,8 +76,8 @@
             </button>
             <mat-menu #optionsMenu="matMenu" xPosition="before">
               <button mat-menu-item (click)="viewUser(row)"><mat-icon>visibility</mat-icon>View Details</button>
-              <button mat-menu-item (click)="edit(row)"><mat-icon>person_remove</mat-icon>Blacklist User</button>
-              <button mat-menu-item (click)="delete(row)"><mat-icon>person_add</mat-icon>Activate User</button>
+              <button mat-menu-item disabled (click)="edit(row)"><mat-icon>person_remove</mat-icon>Blacklist User</button>
+              <button mat-menu-item disabled (click)="delete(row)"><mat-icon>person_add</mat-icon>Activate User</button>
             </mat-menu>
           </td>
         </ng-container>
