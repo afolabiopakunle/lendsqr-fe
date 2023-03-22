@@ -34,6 +34,7 @@ export interface IGuarantor {
   phoneNumber: string
   gender: string
   address: string
+  relationship?: string
 }
 
 export interface ISocials {
