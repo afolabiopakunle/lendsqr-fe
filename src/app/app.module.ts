@@ -11,8 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { UsersComponent } from './components/users/users.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UsersComponent } from './pages/users/users.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,8 +25,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
-import { GurantorsComponent } from './components/gurantors/gurantors.component';
-import { LoansComponent } from './components/loans/loans.component';
+import { GurantorsComponent } from './pages/gurantors/gurantors.component';
+import { LoansComponent } from './pages/loans/loans.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LoansComponent } from './components/loans/loans.component';
     UserDetailsComponent,
     StarRatingComponent,
     GurantorsComponent,
-    LoansComponent
+    LoansComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
