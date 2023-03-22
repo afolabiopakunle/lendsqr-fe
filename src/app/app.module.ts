@@ -25,6 +25,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
+import { GurantorsComponent } from './components/gurantors/gurantors.component';
+import { LoansComponent } from './components/loans/loans.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     DashboardComponent,
     ComingSoonComponent,
     UserDetailsComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    GurantorsComponent,
+    LoansComponent
   ],
   imports: [
     BrowserModule,
