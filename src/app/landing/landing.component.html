@@ -27,13 +27,13 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar><mat-icon class="me-3 material-icons-outlined">work</mat-icon>Switch Organization <mat-icon class="pt-1 ms-3">expand_more</mat-icon></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item class="mb-1" routerLinkActive="active-list-item" routerLink="/dashboard"><mat-icon class="me-3 material-icons-outlined pt-1">home</mat-icon>Dashboard</a>
+      <a mat-list-item class="mb-1" routerLinkActive="active-list-item" routerLink="/landing/dashboard"><mat-icon class="me-3 material-icons-outlined pt-1">home</mat-icon>Dashboard</a>
     </mat-nav-list>
     <p class="ps-3 mb-0">CUSTOMERS</p>
     <mat-nav-list>
-      <a mat-list-item routerLinkActive="active-list-item" class="mb-1" routerLink="/users"><mat-icon class="me-3 material-icons-outlined pt-1">group</mat-icon>Users</a>
-      <a mat-list-item routerLinkActive="active-list-item" class="" routerLink="/guarantors"><mat-icon class="me-3 material-icons-outlined pt-1">groups</mat-icon>Guarantors</a>
-      <a mat-list-item routerLinkActive="active-list-item" routerLink="/loans"><mat-icon class="me-3 material-icons-outlined pt-1">payments</mat-icon>Loans</a>
+      <a mat-list-item routerLinkActive="active-list-item" class="mb-1" routerLink="/landing/users"><mat-icon class="me-3 material-icons-outlined pt-1">group</mat-icon>Users</a>
+      <a mat-list-item routerLinkActive="active-list-item" class="" routerLink="/landing/guarantors"><mat-icon class="me-3 material-icons-outlined pt-1">groups</mat-icon>Guarantors</a>
+      <a mat-list-item routerLinkActive="active-list-item" routerLink="/landing/loans"><mat-icon class="me-3 material-icons-outlined pt-1">payments</mat-icon>Loans</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
