@@ -46,15 +46,11 @@ export class UsersComponent implements OnInit {
     }
   }
 
-  edit(row: any) {
-  }
+  edit(row: any) {}
 
   viewUser(row: any) {
-    console.log(row);
-    this.router.navigate(['/user-details', row.id])
+    this.router.navigate(['/landing/user-details', row.id])
   }
 
-  delete(row: any) {
-
-  }
+  delete(row: any) {}
 }
