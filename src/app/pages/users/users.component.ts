@@ -16,7 +16,7 @@ export class UsersComponent implements OnInit {
   USERS_DATA!: IUser[];
   displayedColumns: string[] = ['orgName', 'userName', 'email', 'phoneNumber', 'createdAt', 'status', 'options'];
   dataSource = new MatTableDataSource<IUser>(this.USERS_DATA);
-
+  contentLoaded = false;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -27,6 +27,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.contentLoaded = false;
     this.userService.getUsers()
       .subscribe({
         next: (data) => {
@@ -34,6 +35,7 @@ export class UsersComponent implements OnInit {
           this.dataSource =  new MatTableDataSource<IUser>(this.USERS_DATA);
           this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
+          this.contentLoaded = true;
         }
       })
   }

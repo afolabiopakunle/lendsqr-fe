@@ -29,6 +29,7 @@ import { GurantorsComponent } from './pages/gurantors/gurantors.component';
 import { LoansComponent } from './pages/loans/loans.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatTooltipModule,
     MatTabsModule,
-
+    NgxSkeletonLoaderModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
