@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +12,11 @@ export class LoginComponent {
   password = 'password';
   show = false;
   form!: FormGroup;
+  isSubmitted = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,
+              private router: Router,
+              ) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -29,5 +33,16 @@ export class LoginComponent {
       this.password = 'password';
       this.show = false;
     }
+  }
+
+  get fc() {
+    return this.form.controls;
+  }
+
+  submit() {
+    this.isSubmitted = true;
+    console.log(this.form);
+    if(this.form.invalid) return
+    this.router.navigate(['/landing/users'])
   }
 }
