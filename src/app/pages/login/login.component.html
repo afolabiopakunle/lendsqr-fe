@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <img class="p-5" src="assets/img/logo.svg" alt="">
+      <img width="280px" class="pt-5 mt-5 ms-n5" src="assets/img/logo.svg" alt="">
     </div>
   </div>
   <div class="row logo">
@@ -24,7 +24,7 @@
             <button (click)="showPassword()" class="btn btn-outline-secondary" style="border: 1px solid #ced4da; border-left: none;" type="button" id="button-addon2">{{ show ? 'HIDE': 'SHOW'}}</button>
             <label for="floatingPassword">Password</label>
           </div>
-          <p class="my-4">FORGOT PASSWORD</p>
+          <p role="button" class="my-4">FORGOT PASSWORD?</p>
 
           <button [disabled]="form.invalid" routerLink="/landing" class="p-3 btn btn-primary w-100">LOG IN</button>
         </form>
