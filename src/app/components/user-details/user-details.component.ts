@@ -27,14 +27,12 @@ export class UserDetailsComponent implements OnInit {
     this.userService.getUser(this.id)
       .subscribe({
         next: (response) => {
-          console.log(response);
           this.user = response;
         }
       })
   }
 
   onRatingChanged(rating: number){
-    console.log(rating);
     this.rating = rating;
   }
 }
