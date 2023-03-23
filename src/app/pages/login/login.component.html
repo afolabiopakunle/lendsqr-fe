@@ -11,20 +11,22 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h2>Welcome!</h2>
+      <h2 class="fw-bold mat-h2">Welcome!</h2>
+      <p class="details mb-5">Enter details to login</p>
       <div class="form">
-        <form>
+        <form [formGroup]="form">
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email</label>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <div class="form-floating input-group">
+            <input formControlName="password" style="border-right: none" [type]="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <button (click)="showPassword()" class="btn btn-outline-secondary" style="border: 1px solid #ced4da; border-left: none;" type="button" id="button-addon2">{{ show ? 'HIDE': 'SHOW'}}</button>
             <label for="floatingPassword">Password</label>
           </div>
           <p class="my-4">FORGOT PASSWORD</p>
 
-          <button disabled routerLink="/landing" class="p-3 btn btn-primary w-100">LOG IN</button>
+          <button [disabled]="form.invalid" routerLink="/landing" class="p-3 btn btn-primary w-100">LOG IN</button>
         </form>
       </div>
     </div>

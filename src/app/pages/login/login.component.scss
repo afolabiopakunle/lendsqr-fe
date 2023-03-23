@@ -18,4 +18,26 @@ form p {
   border-color: #39CDCC;
 }
 
+:not(.btn-check) + .btn:active {
+  background-color: white;
+}
 
+.btn-outline-secondary {
+  color: #39CDCC;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}
+
+input:focus {
+  box-shadow: none;
+}
+
+.fw-bold {
+  font-size: 2.5rem;
+}
+
+p.details {
+  font-size: 20px;
+}

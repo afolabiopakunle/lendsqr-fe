@@ -28,6 +28,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { GurantorsComponent } from './pages/gurantors/gurantors.component';
 import { LoansComponent } from './pages/loans/loans.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -61,6 +63,7 @@ import { LoginComponent } from './pages/login/login.component';
     MatFormFieldModule,
     MatTooltipModule,
     MatTabsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
