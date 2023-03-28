@@ -19,6 +19,12 @@ const routes: Routes = [
       {path: 'user-details/:id', component: UserDetailsComponent},
       {path: 'guarantors', component: GurantorsComponent},
       {path: 'loans', component: LoansComponent},
+      {path: 'loan-requests', component: LoansComponent},
+      {path: 'white-list', component: LoansComponent},
+      {path: 'karma', component: LoansComponent},
+      {path: 'organization', component: LoansComponent},
+      {path: 'loan-products', component: LoansComponent},
+      {path: 'savings-products', component: LoansComponent},
       {path: 'dashboard', component: DashboardComponent},
       {path: '**', redirectTo: 'login', pathMatch: 'full'}
     ],
