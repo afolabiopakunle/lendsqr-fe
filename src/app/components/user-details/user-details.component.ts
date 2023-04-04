@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { IUser } from '../../models/models';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-details',
@@ -11,7 +12,7 @@ import { IUser } from '../../models/models';
 export class UserDetailsComponent implements OnInit {
 
   id!: string;
-  user!: IUser | null;
+  user$!: Observable<IUser | null>;
 
   rating:number = 1;
   starCount:number = 3;
@@ -24,12 +25,7 @@ export class UserDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUser(this.id)
-      .subscribe({
-        next: (response) => {
-          this.user = response;
-        }
-      })
+   this.user$ = this.userService.getUser(this.id);
   }
 
   onRatingChanged(rating: number){

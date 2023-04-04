@@ -10,7 +10,7 @@
       <button mat-stroked-button color="primary">ACTIVATE USER</button>
     </div>
   </div>
-
+<div *ngIf="(user$ | async) as user">
   <div class="row details shadow-sm">
     <div class="col-md-4">
       <div class="persona">
@@ -194,4 +194,5 @@
       </mat-tab>
     </mat-tab-group>
   </div>
+</div>
 </div>

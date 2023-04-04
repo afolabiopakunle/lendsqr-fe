@@ -23,7 +23,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
 import { GurantorsComponent } from './pages/gurantors/gurantors.component';
 import { LoansComponent } from './pages/loans/loans.component';
