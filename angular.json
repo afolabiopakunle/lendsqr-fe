@@ -87,7 +87,7 @@
               "watch": false,
               "progress": false,
               "browsers": "ChromeHeadlessCI"
-            },
+            }
           },
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
