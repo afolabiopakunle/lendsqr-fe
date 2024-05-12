@@ -37,11 +37,6 @@
             "scripts": []
           },
           "configurations": {
-            "ci": {
-              "watch": false,
-              "progress": false,
-              "browsers": "ChromeHeadlessCI"
-            }
             "production": {
               "budgets": [
                 {
@@ -87,6 +82,13 @@
           }
         },
         "test": {
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "progress": false,
+              "browsers": "ChromeHeadlessCI"
+            },
+          },
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
