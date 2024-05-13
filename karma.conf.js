@@ -48,7 +48,7 @@ module.exports = function (config) {
 
     autoWatch: true, 
 
-    browsers: ["Chrome", 'ChromeHeadless', 'ChromeHeadlessCI'], 
+    browsers: ["Chrome", "ChromeHeadless", "ChromeHeadlessCI"], 
 
     customLaunchers: { 
 
