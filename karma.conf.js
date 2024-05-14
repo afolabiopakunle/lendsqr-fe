@@ -23,13 +23,13 @@ module.exports = function (config) {
     colors: true, 
     logLevel: config.LOG_INFO, 
     autoWatch: true, 
-    browsers: ["Chrome", "ChromeHeadless", "ChromeHeadlessCI"],
-    customLaunchers: { 
-      ChromeHeadlessCI: { 
-        base: "ChromeHeadless", 
-        flags: ["--no-sandbox", "--disable-gpu"]
+    browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessCI'],
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
       }
-    }, 
+    },
     singleRun: false, 
   }); 
 }; 
