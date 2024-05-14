@@ -7,7 +7,7 @@
     "build": "ng build",
     "build_surge": "ng build && mv dist/lendsqr/index.html dist/lendsqr/200.html && cd ./dist/lendsqr/ && surge . afolabi-loan-admin.surge.sh",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
